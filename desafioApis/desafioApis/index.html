@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="card" style="width: 18rem;">
+            <div class="money">
+                <h4>Pesos CLP</h4>
+                <input id="amount" type="number" placeholder="Ingrese el monto en CLP"></input>
+            </div>
+        <div class="choose">
+            <h5>Moneda a convertir</h5>
+            <select id="currency">
+                <option value="0">Seleccione moneda</option>
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
+                <option value="uf">UF</option>
+            </select>
+        </div>
+            <button id="btn" onclick="calculate()" class="btn bg-info">Buscar</button>
+            <div id="result">
+                <p>...</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="chart d-flex flex-column justify-content-center align-items-center">
+        <div id="msjError"></div>
+        <h5 class="days">Historial últimos 10 días</h5>
+        <div class="grafica">
+            <canvas id="myChart" style="background-color:white"></canvas>
+        </div>
+    </div>
+   
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
